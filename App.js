@@ -1,11 +1,12 @@
 import React from "react";
 import { StyleSheet, View, Text, Dimensions } from "react-native";
 import { Video } from "expo-av";
+import VideoPlayer from 'expo-video-player'
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text> Eu to aqui</Text>
       <Video
         source={{
           uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
@@ -18,6 +19,16 @@ export default function App() {
         isLooping={false}
         useNativeControls
         style={styles.video}
+      />
+      <VideoPlayer
+        videoProps={{
+          shouldPlay: true,
+          resizeMode: Video.RESIZE_MODE_CONTAIN,
+          source: {
+            uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+          },
+        }}
+        inFullscreen={true}
       />
     </View>
   );
