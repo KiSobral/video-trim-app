@@ -1,3 +1,10 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
-export default StyleSheet.create({})
+const { width, height } = Dimensions.get("window");
+
+export default StyleSheet.create({
+  video: {
+    width: width,
+    height: height / 3,
+  },
+});
