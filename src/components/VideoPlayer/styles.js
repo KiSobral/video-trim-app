@@ -4,7 +4,7 @@ const { width, height } = Dimensions.get("window");
 
 export default StyleSheet.create({
   video: {
-    width: width,
+    width: width - 18,
     height: height / 3,
   },
 });

@@ -1,10 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
+import PhoneCamera from "../../components/PhoneCamera";
+
+import styles from "./styles";
 
 export default function CameraTab() {
   return (
-    <View>
-      <Text> Eu sou a camera </Text>
+    <View style={styles.container}>
+      <PhoneCamera />
     </View>
   );
 }
